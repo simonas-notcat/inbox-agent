@@ -103,6 +103,8 @@ agent:
               headers:
                 Authorization: 
                   $env: MAIN_AGENT_AUTHORIZATION  # 'Bearer API_KEY'
+              schema:
+                $require: ./config/remote-agent-schema.js?t=object#schema
               enabledMethods: #FIXME we should expose only required methods. Requires changes to cli (don't create default did, but serve messaging service)
                 - keyManagerGetKeyManagementSystems
                 - keyManagerCreate
