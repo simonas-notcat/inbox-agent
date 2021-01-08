@@ -103,9 +103,12 @@ agent:
               headers:
                 Authorization: 
                   $env: MAIN_AGENT_AUTHORIZATION  # 'Bearer API_KEY'
-              enabledMethods:
+              enabledMethods: #FIXME we should expose only required methods. Requires changes to cli (don't create default did, but serve messaging service)
                 - keyManagerGetKeyManagementSystems
+                - keyManagerCreate
                 - keyManagerGet
+                - keyManagerDelete
+                - keyManagerImport
                 - keyManagerEncryptJWE
                 - keyManagerDecryptJWE
                 - keyManagerSignJWT
@@ -113,4 +116,11 @@ agent:
                 - didManagerGetProviders
                 - didManagerFind
                 - didManagerGet
-                - resolveDid
+                - didManagerCreate
+                - didManagerGetOrCreate
+                - didManagerImport
+                - didManagerDelete
+                - didManagerAddKey
+                - didManagerRemoveKey
+                - didManagerAddService
+                - didManagerRemoveService
