@@ -25,6 +25,14 @@
       "AGENT_ENDPOINT": {
         "description": "Prefix for agent endpoints",
         "value": "/agent"
+      },
+      "MAIN_AGENT_URL": {
+        "description": "Main agent URL",
+        "value": ""
+      },
+      "MAIN_AGENT_AUTHORIZATION": {
+        "description": "Main agent authorization",
+        "value": "Bearer API_KEY"
       }
     }
   }
